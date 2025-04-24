@@ -11,12 +11,16 @@ The key findings include:
 This work highlights the potential of HSM-ML for managing unstructured Big Data applications, such as JSON, Graphs, Spatial, Temporal, Tweets, and Reviews, paving the way for future research in scalable data management.
 
 ## Repository Structure
-- **code/**: Contains the source code for implementing HSM-ML and conducting experiments (e.g., `analyze_metrics.py`).
+- **code/**: Contains the source code for implementing HSM-ML
+  - `run_experiment_selective_paper1.py`: Script for implementing HSM-ML and conducting experiments
+  - `stat-hsm-ml.py`: Script for calculating statistical metrics (e.g., select latency, throughput).
+  - `graph-hsm-ml.py`: Script for generate graphs (e.g., Graphs latency, throughput).
 - **data/**: Includes the experimental datasets:
   - `BANK.csv`: Financial transaction dataset (20,000 records).
   - `COVID.csv`: Health statistics dataset (100,000 records).
   - `OpenSky.csv`: Real-time tracking dataset (2,183,879 records).
   - `B77W_test_processed.csv`: Additional large-scale dataset used in experiments (Note: Managed with Git LFS due to file size).
+  - `experiment_data.xlsx`: Dataset used for statistical analysis and graph generation.
 - **docs/**: Contains the paper draft and related documentation (if applicable).
 
 ## Usage
