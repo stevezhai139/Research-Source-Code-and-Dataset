@@ -1,0 +1,2 @@
+within_mean,within_std,within_ci95,cross_mean,cross_std,cross_ci95,disc_mean,disc_std,disc_ci95,wilcoxon_p,mann_whitney_U,icc_within,icc_across,n_runs,S_R_within,S_R_cross,S_V_within,S_V_cross,S_T_within,S_T_cross,S_A_within,S_A_cross,S_P_within,S_P_cross
+0.8732,0.0085,0.0105,0.7957,0.0212,0.0263,1.098,0.0292,0.0362,0.0,1896.0,0.0824,-0.1866,5,0.9347,0.9222,0.8947,0.9134,0.9793,0.9832,0.8259,0.4582,0.7316,0.7016

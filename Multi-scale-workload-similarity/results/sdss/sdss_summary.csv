@@ -1,0 +1,2 @@
+dataset,mode,n_phases,n_windows,n_pairs_within,n_pairs_across,within_mean_hsm,within_std_hsm,cross_mean_hsm,cross_std_hsm,disc_ratio,mannwhitney_p,S_R_within,S_R_cross,S_A_within,S_A_cross,S_P_within,S_P_cross
+SDSS SkyServer DR18,OFFLINE (synthetic from published stats),4,80,76,3,0.902,0.0295,0.7526,0.0176,1.1986,0.0018,1.0,1.0,0.8678,0.1461,0.7306,0.7301

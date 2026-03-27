@@ -1,0 +1,16 @@
+table,col,rebuild_ms,run,sf,n_lineitem
+lineitem,l_shipdate,24282.14,1,10.0,59990325
+lineitem,l_orderkey,22592.62,1,10.0,59990325
+orders,o_orderdate,3189.23,1,10.0,59990325
+lineitem,l_shipdate,22784.06,2,10.0,59990325
+lineitem,l_orderkey,21167.24,2,10.0,59990325
+orders,o_orderdate,3115.72,2,10.0,59990325
+lineitem,l_shipdate,22360.51,3,10.0,59990325
+lineitem,l_orderkey,22062.63,3,10.0,59990325
+orders,o_orderdate,2964.87,3,10.0,59990325
+lineitem,l_shipdate,22815.58,4,10.0,59990325
+lineitem,l_orderkey,21368.73,4,10.0,59990325
+orders,o_orderdate,3118.33,4,10.0,59990325
+lineitem,l_shipdate,23104.26,5,10.0,59990325
+lineitem,l_orderkey,22451.35,5,10.0,59990325
+orders,o_orderdate,3001.78,5,10.0,59990325

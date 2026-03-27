@@ -1,0 +1,17 @@
+# HSM Reproducibility Package — Python dependencies
+# Install: pip install -r requirements.txt
+
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+PyWavelets>=1.4.1        # pywt — for DWT band computation (src/hsm/windowing.py)
+requests>=2.31.0         # for 04_sdss_realdata.py
+
+# Required to re-run live PostgreSQL experiments from scratch
+# (experiments/run_scale_experiment.py, experiments/03_scale_tpch.py)
+# Pre-generated results are already provided in results/scale/ and results/tpch/
+psycopg2-binary>=2.9.0
+
+# Optional: for plotting figures (not required for table reproduction)
+# matplotlib>=3.7.0
+# seaborn>=0.12.0

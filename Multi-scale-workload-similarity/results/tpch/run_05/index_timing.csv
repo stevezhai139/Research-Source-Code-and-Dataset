@@ -1,0 +1,2 @@
+seq_scan_ms,idx_create_ms,idx_scan_ms,idx_size_bytes,speedup_ratio,theta_star
+35.052,223.973,7.76,60047360,4.517,0.891382

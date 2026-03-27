@@ -1,0 +1,10 @@
+table,col,rebuild_ms,run,sf,n_lineitem
+lineitem,l_shipdate,48.67,1,0.05,299885
+lineitem,l_orderkey,30.13,1,0.05,299885
+orders,o_orderdate,12.91,1,0.05,299885
+lineitem,l_shipdate,49.03,2,0.05,299885
+lineitem,l_orderkey,30.88,2,0.05,299885
+orders,o_orderdate,12.88,2,0.05,299885
+lineitem,l_shipdate,49.24,3,0.05,299885
+lineitem,l_orderkey,29.5,3,0.05,299885
+orders,o_orderdate,13.23,3,0.05,299885

@@ -1,0 +1,6 @@
+variant,removed_dim,within_mean,within_std,cross_mean,cross_std,disc_mean,disc_ci95
+hsm_no_sr,SR,0.8579,0.0087,0.7641,0.0223,1.1233,0.0332
+hsm_no_sv,SV,0.8679,0.0105,0.7663,0.0184,1.1331,0.0408
+hsm_no_st,ST,0.8467,0.01,0.7488,0.0227,1.1314,0.0355
+hsm_no_sa,SA,0.8851,0.0112,0.8801,0.0245,1.0064,0.0442
+hsm_no_sp,SP,0.9086,0.0068,0.8192,0.0273,1.1101,0.0443
