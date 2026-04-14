@@ -19,7 +19,7 @@ the empirical results in the paper.
 | Detector quality (TPC-H)       | $\hat J = 1.000$ (Hoeffding 95% LB $\geq 0.77$)                      |
 | Cross-scale invariance         | $N^{\star}$ unchanged across $15\times$ change in $N$ (SF 0.2 → 3.0) |
 | Throughput gain over advisor   | See `paper/HSM_main.pdf` Section VI                                  |
-| Total replication time         | $\sim$8 hours on a 16-core machine with 32 GB RAM                    |
+| Total replication time         | ~8 hours on a 16-core machine with 32 GB RAM                         |
 
 ---
 
@@ -143,7 +143,7 @@ If this code or paper is useful, please cite:
 ```bibtex
 @article{hsm2026,
   title  = {HSM: Hierarchical Similarity Measurement for Gated Index Management},
-  author = {Reungsinkonkarn, Arun and ...},
+  author = {Reungsilpkolkarn, Arun},
   year   = {2026},
   note   = {Manuscript under review},
 }
