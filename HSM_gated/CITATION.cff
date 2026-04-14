@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use HSM in your research, please cite the accompanying paper."
+title: "HSM: Hierarchical Similarity Measurement for Proactive Database Index Management"
+authors:
+  - family-names: Reungsilpkolkarn
+    given-names: Arun
+    email: arunjai139@gmail.com
+version: 4.0.0
+date-released: 2026-04-14
+license: BSD-3-Clause
+repository-code: "https://github.com/<your-org>/hsm-index-management"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Reungsilpkolkarn
+      given-names: Arun
+  title: "Hierarchical Similarity Measurement: A Multi-Scale Framework for Proactive Database Index Management"
+  journal: "IEEE Transactions on Knowledge and Data Engineering"
+  year: 2026
+  notes: "Submitted; under review."

@@ -1,0 +1,48 @@
+# Local environment (NEVER commit real credentials)
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Experiment results / generated data
+results/
+data/sf*/
+data/imdb/
+data/job/
+*.tbl
+*.dump
+
+# TPC-H build artefacts
+TPC-H V3.0.1/
+**/dbgen
+**/qgen
+**/*.o
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# LaTeX build artefacts (we only ship the final PDFs)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz

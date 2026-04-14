@@ -1,0 +1,64 @@
+version: "3.8"
+
+# ─── HSM Experiment — Memory-Constrained PostgreSQL ─────────────────
+#
+# PURPOSE:
+#   Runs PostgreSQL with RAM limited to 8 GB so that SF=10 data (~16.7 GB)
+#   cannot fully reside in memory.  This forces genuine disk I/O and allows
+#   the index advisor conditions to show real performance differences.
+#
+# MEMORY BUDGET (8 GB total):
+#   shared_buffers    = 2 GB   (PostgreSQL buffer pool)
+#   OS page cache     ≈ 5 GB   (remaining after shared_buffers + OS overhead)
+#   Total addressable ≈ 7 GB   → SF=10 (~16.7 GB) cannot be fully cached
+#
+# USAGE:
+#   docker compose up -d          # start container
+#   docker compose down           # stop container
+#   docker compose down -v        # stop + delete data volume
+#
+# PostgreSQL is exposed on host port 5433 (native stays on 5432).
+# Run experiments with: python experiment_runner.py --port 5433
+# ──────────────────────────────────────────────────────────────────────────────
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: tpch_docker
+    restart: unless-stopped
+
+    # ── Hard memory cap (enforced by Docker / cgroups) ───────────────────────
+    mem_limit: 8g
+    mem_reservation: 6g
+    memswap_limit: 8g          # disable swap so memory limit is hard
+
+    # ── PostgreSQL environment ────────────────────────────────────────────────
+    # Credentials are read from `.env` at repo root (copy `.env.example` first).
+    # Defaults fall back to `postgres` for local-only development; ALWAYS set a
+    # non-default password before exposing port 5433 outside localhost.
+    environment:
+      POSTGRES_USER:     ${HSM_DOCKER_USER:-postgres}
+      POSTGRES_PASSWORD: ${HSM_DOCKER_PASSWORD:-postgres}
+      POSTGRES_DB:       ${HSM_DOCKER_DB:-postgres}
+
+    # ── Custom postgresql.conf tuned for 8 GB RAM ─────────────────────────────
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgresql_docker.conf:/etc/postgresql/postgresql.conf:ro
+
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+
+    # ── Expose on host port 5433 (native PostgreSQL uses 5432) ───────────────
+    ports:
+      - "5433:5432"
+
+    # ── Health check ──────────────────────────────────────────────────────────
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${HSM_DOCKER_USER:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
+    driver: local
